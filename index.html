@@ -3,59 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数学のいろは</title>
+    <title>モノクサー学習アプリ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>数学のいろは</h1>
-        <nav>
-            <ul>
-                <li><a href="#代数学">代数学</a></li>
-                <li><a href="#幾何学">幾何学</a></li>
-                <li><a href="#解析学">解析学</a></li>
-            </ul>
-        </nav>
+        <h1>モノクサー</h1>
     </header>
-    <main>
-        <section id="代数学">
-                <h2>代数学</h2>
-                <p>ここでは代数学についてお話します。</p>
-                <p>代数学には様々なおもしろい理論が存在します。</p>
-                <p>例えば、群・環・体の理論を応用することでガロア理論が導け、</p>
-                <p>その結果としてアーベル・ルフィニの定理を証明することに成功します。</p>
-                <p>単なる計算テクニックにとどまらず、加法乗除の真価に迫ります。</p>
-                <p>（右図は、三平方の定理を発見した『サモスの数学奇人』ピュタゴラスの銅像です）</p>
-                <p>　</p>
-        </section>
-        <section id="幾何学">
-                <h2>幾何学</h2>
-                <p>ここでは幾何学についてお話します。</p>
-                <p>幾何学では、位相空間や距離の話をよく理解しておかなくてはなりません。</p>
-                <p>高校までで習ってきた感覚では、捉えにくい概念を多種扱うからです。</p>
-                <p>今まで絶対の常識のように信じきっていたユークリッド空間へ挑戦状を叩きつけ、</p>
-                <p>図形的な数学の世界観を、計り知れない高次元へと拡張していきます。</p>
-                <P>（右図は、『原論』を編纂し、後世に多大な影響を与えた『数学界の母』エウクレイデスです）</P>
-                <p>　</p>
-        </section>
-        <section id="解析学">
-                <h2>解析学</h2>
-                <p>ここでは解析学についてお話します。</p>
-                <p>一見わかりそうでわからない。摑みどころの難しい雲の上のインテグラル。</p>
-                <p>しかし基礎固めをしっかりしていれば、困ることはほぼありません。</p>
-                <p>人類が生み出した最高に賢い表現　～関数～</p>
-                <p>そこに秘められた特性は、かならずや数学徒を「解析沼」に引きずり込みます。</p>
-                <p>（右図は、当時の曖昧な解析学を駆逐した『フランスの狂気』ルイ・コーシーです）</p>
-                <p>　</p>
-        </section>
-        <form id="contact-form">
-            <label for="name">名前:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="message">メッセージ:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="button" onclick="submitForm()">Submit</button>
-        </form>
-    </main>
+    <div class="container">
+        <div class="tag-container">
+            <h2>タグ一覧</h2>
+            <ul id="tag-list"></ul>
+        </div>
+        <div class="flashcard" id="flashcard">
+            <div class="content">
+                <div class="question" id="question">質問がここに表示されます</div>
+                <div class="answer" id="answer" style="display: none;">答えがここに表示されます</div>
+            </div>
+            <div class="buttons">
+                <button class="btn" id="show-answer">答えを表示</button>
+                <button class="btn" id="next-question">次の質問</button>
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>新しい質問を追加</h2>
+            <form id="question-form">
+                <input type="text" id="new-tag" placeholder="タグ" required>
+                <input type="text" id="new-question" placeholder="質問" required>
+                <input type="text" id="new-answer" placeholder="答え" required>
+                <button type="submit" class="btn">追加</button>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

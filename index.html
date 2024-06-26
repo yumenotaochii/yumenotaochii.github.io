@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>モノクサー学習アプリ</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>二次方程式について</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>モノクサー</h1>
-    </header>
-    <div class="container">
-        <div class="tag-container">
-            <h2>タグ一覧</h2>
-            <ul id="tag-list"></ul>
-        </div>
-        <div class="flashcard" id="flashcard">
-            <div class="content">
-                <div class="question" id="question">質問がここに表示されます</div>
-                <div class="answer" id="answer" style="display: none;">答えがここに表示されます</div>
-            </div>
-            <div class="buttons">
-                <button class="btn" id="show-answer">答えを表示</button>
-                <button class="btn" id="next-question">次の質問</button>
-            </div>
-        </div>
-        <div class="form-container">
-            <h2>新しい質問を追加</h2>
-            <form id="question-form">
-                <input type="text" id="new-tag" placeholder="タグ" required>
-                <input type="text" id="new-question" placeholder="質問" required>
-                <input type="text" id="new-answer" placeholder="答え" required>
-                <button type="submit" class="btn">追加</button>
-            </form>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+<!-- ヘッダー -->
+<header>
+  <h1>二次方程式について</h1>
+</header>
+
+<!-- 二次方程式の解説 -->
+<section>
+  <h2>二次方程式とは</h2>
+  <p>
+    二次方程式は、一般的に ax² + bx + c = 0 という形の方程式です。ここで、a、b、c は定数であり、x は変数です。
+  </p>
+</section>
+
+<!-- 二次方程式の解法 -->
+<section>
+  <h2>二次方程式の解法</h2>
+  <p>
+    二次方程式の解を求めるには、以下の方法があります：
+  </p>
+  <ul>
+    <li>因数分解</li>
+    <li>平方完成</li>
+    <li>解の公式</li>
+  </ul>
+  <p>解の公式は次の通りです：<br>
+    x = (-b ± √(b² - 4ac)) / 2a
+  </p>
+</section>
+
+<!-- 二次方程式の例題 -->
+<section>
+  <h2>例題</h2>
+  <p>
+    次の二次方程式を解いてみましょう：<br>
+    2x² - 4x - 6 = 0
+  </p>
+  <p>解答：<br>
+    解の公式を使うと、x = (4 ± √(16 + 48)) / 4 = (4 ± √64) / 4 = (4 ± 8) / 4 より、x = 3 または x = -1 となります。
+  </p>
+</section>
+
+<!-- フッター -->
+<footer>
+  &copy; 数学好きな男子高校生
+</footer>
+
 </body>
+
 </html>
